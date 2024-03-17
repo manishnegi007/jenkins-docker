@@ -22,7 +22,7 @@ pipeline {
                 script{
                     withCredentials([string(credentialsId: 'dockercred-pwd', variable: 'dockercredpwd')]) {
                     sh 'docker login -u manishnegidocker -p ${dockercredpwd}'
-}
+                    }
                     sh 'docker push manishnegidocker/jenkins-docker'
 
                 }
